@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/f5161e1654.js" crossorigin="anonymous"></script>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700;800&family=Kaushan+Script&display=swap" rel="stylesheet">
+    <!--main CSS-->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CritiComida</title>
+</head>
+
+
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-sm px-4">
+            <!--logo-->
+            <a href="#" class="navbar-brand">
+                <img src="img/logosm.png" alt="CritiComida">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myNavbar">
+            <span class="toggler-icon">
+            <i class="fas fa-bars"></i> <!--cria icone menu sandwich-->
+            </span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav text-capitalize mx-auto">
+                    <li class="nav-item active">
+                        <a href="#header" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reviews" class="nav-link">reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link">services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#order" class="nav-link">store</a>
+                    </li>
+                </ul>
+                <div class="info-items d-none d-lg-flex">
+                    <!--so aparece em lg-screen -->
+                    <!--single info (Phone number)-->
+                    <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                        <span class="info-icon mx-lg-3">
+                        <i class="fas fa-envelope"></i>
+                        </span>
+                        <p class="mb-0">info@criticomida.com</p>
+                    </div>
+                    <!--single info (shoping cart)-->
+                    <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <span class="cart-info_icon mr-lg-3">
+                        <i class="fas fa-shopping-cart"></i> <!--icone de carrinho-->
+                        </span>
+                        <p class="mb-0 text-capitalize">
+                            <span id="item-count">2</span> items - $
+                            <span class="item-total">10.49</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--end of nav-->
+        <!--banner-->
+        <div class="container-fluid">
+            <div class="row max-height justify-content-center align-items-center">
+                <div class="col-10 mx-auto banner text-center text-white">
+                    <h1 class="text-capitalize">welcome to <strong class="banner-title">CritiComida</strong>
+                    </h1>
+                    <a rel="stylesheet" href="#reviews" class="btn banner-link text-uppercase my-2">explore</a>
+                </div>
+                <!--cart-->
+                <div class="cart" id="cart">
+                    <!--cart single item-->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="./img/cart1.jpg" class="img-fluid rounded-circle" id="item-img" alt="">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of cart item-->
+                    <!--cart single item-->
+                    <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                        <img src="./img/cart2.jpg" class="img-fluid rounded-circle" id="item-img" alt="">
+                        <div class="item-text">
+                            <p id="cart-item-title" class="font-weight-bold mb-0">cart-item</p>
+                            <span>$</span>
+                            <span id="cart-item-price" class="cart-item-price mb-0">5.99</span>
+                        </div>
+                        <a href="#" id="cart-item-remove" class="cart-item-remove">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                    <!--end of cart item-->
+                    <!--cart total-->
+                    <div class="cart-total-container d-flex justify-content-around text-captitalize mt-5">
+                        <h5>total</h5>
+                        <h5>$ <strong id="cart-total" class="font-weight-bold">16.98</strong></h5>
+                    </div>
+                    <!--end of cart total-->
+                    <!--cart buttons-->
+                    <div class="card-buttons-container mt-3 d-flex justify-content-between">
+                        <a href="#" id="clear-cart" class="btn btn-black text-uppercase">clear cart</a>
+                        <a href="#" id="check-out-cart" class="btn btn-pink text-uppercase">check-out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of banner-->
+    </header>
+    <!--end of header-->
+    <!--about section-->
+    <section class="about py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1 class="text-capitalize">About<strong class="banner-title">us</strong></h1>
+                    <p class="my-4 text-muted w-75 about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non suscipit, corporis aut maxime nesciunt quos itaque ratione architecto iure id eius ut officiis quasi reiciendis? Debitis provident consectetur doloremque ducimus.</p>
+                    <a href="#" class="btn btn-black text-uppercase">explore</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 my-5 align-self-center">
+                    <div class="about-img_container">
+                        <img src="./img/aboutnew.jpg" class="img-fluid" alt="Acerca Criticomida">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--reviews section-->
+    <section id="reviews" class="reviews py-5">
+        <div class="container">
+            <!--section title-->
+            <div class="row col-10 mx-auto col-sm-6 text-center">
+                <h1 class="text-capitalize">Our <strong class="banner-title">reviews</strong></h1>
+            </div>
+            <!--end of section title-->
+            <!--filter buttons-->
+            <div class="row">
+                <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">All</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="sweets">sweets</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="brunch">brunchs</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="breakfast">breafast</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="junkfood">Mex-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="japan">Japanese-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="arabic">Arabic-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="israel">Israel-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="thailand">Thai-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="korean">Korean-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="china">Chinese-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="parrilla">BBQ</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="brazil">Brazilian-food</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="hamburguers">Burguers</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="helados">Ice-cream</a>
+                    <a href="#" class="btn btn-black text-uppercase filter-btn m-2" data-filter="peru">peru-food</a>
+                </div>
+            </div>
+            <br>
+            <!--end of filter buttons-->
+            <!--search box-->
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6">
+                    <form>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text search-box" id="search-icon">
+                            <i class="fas fa-search fa-2x"></i>
+                        </span>
+                            </div>
+                            <input type="text" class="form-control" id="search-id" placeholder="restaurant/food...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--end of search box-->
+            <!--review items-->
+            <div class="row review-items" id="review-items">
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item dulces" data-item="dulces">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/dulces.jpg" class="card-img-top review-img" alt="postres Criticomida">
+                            <span class="review-item-icon">
+                        <i class="fas fa-search-location"></i>
+                    </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="review-item-name">reseñas de dulces</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price" class="font-weight-bold">5</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--enf od single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item brunchs" data-item="brunchs">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/brunch.jpg" class="card-img-top review-img" alt="brunch Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas de brunchs</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">10</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item desayunos" data-item="desayunos">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/breakfast.jpg" class="card-img-top review-img" alt="Desayunos Criticomida">
+                            <span class="review-item-icon">
+                        <i class="fas fa-search-location"></i>
+                    </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas de desayunos</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">18</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item mexico-food" data-item="mexfood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/mexfood2.jpg" class="card-img-top review-img" alt="mex-food Criticomida">
+                            <span class="review-item-icon"><i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas mex-food</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">25</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item japan-food" data-item="japanfood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/japanfood.jpg" class="card-img-top review-img" alt="japanfood Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas japan-food</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">50</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item arabic-food" data-item="arabicfood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/arabicfood.jpg" class="card-img-top review-img" alt="Comida arabe Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas Arabic-food</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">16</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item israelfood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/israelfood.jpg" class="card-img-top review-img" alt="comida israeli criticomida">
+                            <span class="review-item-icon">
+                    <i class="fas fa-search-location"></i>
+                </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas comida Israeli</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">19</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item thaifood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/thaifood.jpg" class="card-img-top review-img " alt="comida thai Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas comida Thai</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">31</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item koreanfood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/koreanfood.jpg" class="card-img-top review-img" alt="Korean food Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas comida Koreana</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bol">29</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item chinafood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/chinafood.jpg" class="card-img-top review-img" alt="comida china Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas comida china</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">24</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item parrillas">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/parrilla.jpg" class="card-img-top review-img" alt="parrilas Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas parrilas</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">50</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item brazilfood">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/brazilfood.jpg" class="card-img-top review-img" alt="Comida brasilena Criticomida">
+                            <span class="review-item-icon">
+                            <i class="fas fa-search-location"></i>
+                        </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas Comida Brasileira</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">39</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item burguers">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/burguers.jpg" class="card-img-top review-img" alt="habuerguesas Criticomida">
+                            <span class="review-item-icon">
+                                <i class="fas fa-search-location"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas Burguers</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">12</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item helados">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/helados.jpg" class="card-img-top review-img" alt="helados Criticomida">
+                            <span class="review-item-icon">
+                                <i class="fas fa-search-location"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseñas helados</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">9</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+                <!--single item-->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 review-item peru-food">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/perufood.jpg" class="card-img-top review-img" alt="Comida peruana Criticomida">
+                            <span class="review-item-icon">
+                                <i class="fas fa-search-location"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 class="review-item-name">reseña comida peruana</h5>
+                                <h5 class="review-item-value">$ <strong class="review-item-price font-weight-bold">12</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--end of single item-->
+            </div>
+            <!--end of review items-->
+        </div>
+    </section>
+    <!--end of review section -->
+    <!--services section-->
+    <section id="services" class="services py-5 text-light">
+        <div class="container">
+            <div class="row">
+                <!--single service-->
+                <div class="col-md-4 text-center my-3">
+                    <img src="./img/store.png" alt="">
+                    <h6 class="text-uppercase my-3 service-title">post</h6>
+                    <p class="w-75 mx-auto text-left service-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet fugiat facere commodi voluptatum architecto voluptate adipisci vero, qui quaerat? Rem?</p>
+                </div>
+                <!--end of single service-->
+                <!--single service-->
+                <div class="col-md-4 text-center my-3">
+                    <img src="./img/delivery.png    " alt="">
+                    <h6 class="text-uppercase my-3 service-title">bell</h6>
+                    <p class="w-75 mx-auto text-left service-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam aperiam sapiente quia veritatis accusamus rerum delectus cum ad perferendis vero.</p>
+                </div>
+                <!--end of single service-->
+                <!--single service-->
+                <div class="col-md-4 text-center my-3">
+                    <img src="./img/vending.png" alt="">
+                    <h6 class="text-uppercase my-3 service-title">serice</h6>
+                    <p class="w-75 mx-auto text-left service-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum explicabo eius assumenda minima atque voluptatum voluptate voluptatem quo porro ipsum.</p>
+                </div>
+                <!--end of single service-->
+            </div>
+        </div>
+    </section>
+    <!--end of services section-->
+    <!--apoiadores-->
+    <section id="apoiadores" class="sugerencia py-5">
+        <div class="container">
+            <!--title-->
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">Our <strong class="banner-title">Sponsors</strong></h1>
+                </div>
+            </div>
+            <!--end of title-->
+            <div class="row">
+                <!--single apoiadores-->
+                <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+                    <h3 class="py-3">Food Network</h3>
+                    <div class="text-muted">
+                        <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <img src="./img/foodnetwork.png" class="img-fluid" alt="apoiadores Criticomida">
+                        <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-pink text-capitalize my-3">Check-it out</button>
+                    </div>
+                </div>
+                <!--end of apoiadores-->
+                <!--single apoiadores-->
+                <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+                    <h3 class="py-3">Lowes Foods</h3>
+                    <div class="text-muted">
+                        <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="my-3">Lorem ipsum dolor sit.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                        <img src="./img/lowesfoods.png" class="img-fluid" alt="Apoiadores Criticomida">
+                        <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-pink text-capitalize">Check-it out</button>
+                    </div>
+                </div>
+                <!--end of apoiadores-->
+                <!--single apoiadores-->
+                <div class="col-11 mx-auto col-md-6 col-lg-4 my-4 text-capitalize text-center">
+                    <h3 class="py-3">AlNatura</h3>
+                    <div class="text-muted">
+                        <p class="my-3">Lorem ipsum dolor sit.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="my-3">Lorem ipsum dolor sit amet consectetur.</p>
+                        <p class="my-3">Lorem, ipsum dolor.</p>
+                        <img src="./img/alnatura.png" class="img-fluid img-brand" alt="apoiadores criticomida">
+                        <p class="my-3">Lorem ipsum dolor sit amet.</p>
+                        <button type="button" class="btn btn-pink text-capitalize">Check-it out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end of apoiadores-->
+    <!--fotter-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 footer-title py-5">
+                    <h1 class="text-capitalize text-center"><strong class="banner-title">CritiComida</strong>
+                    </h1>
+                    <div class="footer-icons mt-3 d-flex justify-content-around flex-warp">
+                        <a href="#" class="footer-icon">
+                            <i class="fab fa-facebook fa-1.5x"></i>
+                        </a>
+                        <a href="#" class="footer-icon">
+                            <i class="fab fa-twitter fa-1.5x"></i>
+                        </a>
+                        <a href="#" class="footer-icon">
+                            <i class="fab fa-youtube fa-1.5x"></i>
+                        </a>
+                        <a href="#" class="footer-icon">
+                            <i class="fab fa-instagram fa-1.5x"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 footer-contact text-center p-5">
+                    <h3 class="mb-5">Contacto</h3>
+                    <p class="d-flex flex-wrap">
+                        <span class="mr-4 footer-icons">
+                                        <i class="fas fa-map"></i>
+                                    </span>
+                        <span>
+                                        38, Kilshane Drive Dublin 8 - Finglas / Ireland
+                                    </span>
+                    </p>
+                    <p class="d-flex flex-wrap">
+                        <span class="mr-4 footer-icons">
+                                            <i class="fas fa-envelope"></i>
+                                        </span>
+                        <span>
+                                            criticomida@criticomida.com
+                                        </span>
+                    </p>
+                    <p class="d-flex flex-wrap">
+                        <span class="mr-4 footer-icons">
+                                            <i class="fas fa-phone"></i>
+                                        </span>
+                        <span>123-456-789</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end of footer-->
+    <!--end of sponsors-->
+
+    <!--Jquery-->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!--Main JS-->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
