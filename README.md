@@ -2,7 +2,8 @@
 
 ## CritiComida
 
-Proyecto Hostel Irlanda. proyecto con objetivo de praticar el uso de herramientas como Bootstrap.
+Proyecto de sitio de criticas de comidas.
+Proyecto con objetivo de pratica en el uso de herramientas como Bootstrap.
 
 Tecnologias utilizadas:
 
